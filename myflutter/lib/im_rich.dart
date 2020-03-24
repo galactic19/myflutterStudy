@@ -6,9 +6,11 @@ void main() {
       home: Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
-          title: Padding(
-            padding: const EdgeInsets.all(12.0),
-            child: Text('I\'m Rich22'),
+          title: Center(
+            child: Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: Text('I\'m Rich22'),
+            ),
           ),
           backgroundColor: Colors.black,
         ),

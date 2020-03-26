@@ -23,7 +23,11 @@ flutter:
     - images/
 
   fonts:
-    - family: NotoSansKR
+    - family: Noto
       fonts:
         - asset: fonts/NotoSansKR-Black.otf
+
+    - family: Nanumbrash
+      fonts:
+        - asset: fonts/NanumBrushScript-Regular.ttf
 

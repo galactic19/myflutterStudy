@@ -9,43 +9,75 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return MaterialApp(
-      home:Scaffold(
-        backgroundColor: Colors.teal,
-        appBar:AppBar(
-          backgroundColor: Colors.black54,
-          title:Text('앱바 타이틀'),
-        ),
-        body:SafeArea(
-          child:Row(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      home: Scaffold(
+        backgroundColor: Colors.indigo,
+//        appBar: AppBar(
+//          backgroundColor: Colors.deepPurple,
+//          title: Text('모두의휴대폰'),
+//        ),
+        body: SafeArea(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Container(
-                width:100.0,
-                color:Colors.redAccent,
-                child:Text('Container 1'),
+                margin:EdgeInsets.symmetric(vertical: 10.0,horizontal: 0.0),
+                child: CircleAvatar(
+                  radius: 45.0,
+                  backgroundImage: NetworkImage(
+                      'http://www.modoophone.com/resources/img/cate/modoologo.png'),
+                  backgroundColor: Colors.white,
+                ),
               ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Container(
-                    width:100.0,
-                    height:100.0,
-                    color:Colors.limeAccent,
-                    child:Text('container Child 1'),
-                  ),
-                  Container(
-                    width:100.0,
-                    height:100.0,
-                    color:Colors.lime,
-                    child:Text('container Child 2'),
-                  ),
-                ],
+              Text(
+                '모두의 휴대폰',
+                style: TextStyle(
+                    //letterSpacing: 3.0,
+                    color: Colors.white,
+                    fontFamily: 'Noto',
+                    fontSize: 35.0,
+                    fontWeight: FontWeight.bold),
               ),
-              Container(
-                width:100.0,
-                color:Colors.blue,
-                child:Text('container 3'),
+              Text(
+                '온라인 공식 인증 대리점',
+                style: TextStyle(
+                  color: Colors.amberAccent,
+                  fontFamily: 'Noto',
+                  fontSize: 13.0,
+                  fontWeight: FontWeight.w100
+                ),
+              ),
+              Text('Best Online Market',
+                  style: TextStyle(
+                    color: Colors.deepOrangeAccent.shade200,
+                    fontSize: 15.0,
+                  )),
+              Card(
+                margin:
+                    EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: ListTile(
+                  leading:Icon(
+                    Icons.phone,
+                    color: Colors.indigo,
+                  ),
+                  title:Text(
+                    '+82 010-9674-2210',
+                    style: TextStyle(color: Colors.indigo, fontSize: 18.0),
+                  ),
+                ),
+              ),
+              Card(
+                margin:
+                    EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child:ListTile(
+                  leading: Icon(Icons.email, color: Colors.indigo),
+                  title:Text(
+                    'galactic19@gmail.com',
+                    style: TextStyle(
+                        color: Colors.indigo,
+                        fontSize: 18.0,
+                        fontFamily: 'Noto'),
+                  ),
+                ),
               ),
             ],
           ),
@@ -54,3 +86,4 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
